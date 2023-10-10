@@ -8,12 +8,19 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("movie-title").textContent = `Movie Title: ${movie.title}`;
             document.getElementById("movie-runtime").textContent = `movie-runtime: ${movie.runtime}`;
             document.getElementById("movie-capacity").textContent = `Capacity: ${movie.capacity}`;
-            document.getElementById("movie-description").textContent = `Description: ${movie.description}`;
+            document.getElementById("movie-showtime").textContent = `showtime: ${movie.showtime}`;
+            document.getElementById("movie-tickets_sold").textContent = `tickets_sold: ${movie.tickets_sold}`;
+           
+            document.getElementById("movie-description").textContent = `description: ${movie.description}`;
+        
             document.getElementById("movie-poster").src = movie.poster;
         })
         .catch((error) => {
             console.error("Error fetching movie data:", error);
         });
+
+
+        
 
     // Handle form submission (you can add your booking logic here)
     const bookingForm = document.querySelector("form");
